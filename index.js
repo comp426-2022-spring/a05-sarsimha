@@ -116,6 +116,12 @@ app.get('/app/flip/call/heads', (req, res) => {
     res.status(200).json(flipACoin('heads'));
 })
 
+app.post('/app/flip/call/', (req, res, next) => {
+        const game  = flipACoin(req.body.guess)
+        res.status(200).json(game)
+
+})
+
 app.get('/app/flip/call/tails', (req, res) => {
     res.status(200).json(flipACoin('tails'));
 })
