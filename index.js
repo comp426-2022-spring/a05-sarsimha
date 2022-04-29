@@ -9,6 +9,7 @@ const fs = require('fs');
 
 //read unrlencoded and json using express
 app.use(express.urlencoded({extended: true}));
+// Make Express use its own built-in body parser to handle JSON
 app.use(express.json());
 
 const args = require('minimist')(process.argv.slice(2))
@@ -58,6 +59,9 @@ app.use( (req, res, next) => {
     const info = stmt.run(logdata.remoteaddr.toString(), logdata.remoteuser, logdata.time, logdata.method.toString(), logdata.url.toString(), logdata.protocol.toString(), logdata.httpversion.toString(), logdata.secure.toString(), logdata.status.toString(), logdata.referer, logdata.useragent.toString())
     next()
  })
+
+ // Serve static HTML files
+app.use(express.static('./public'));
 
 app.get('/app/', (req, res) => {
   // Respond with status 200
