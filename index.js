@@ -72,7 +72,6 @@ app.get('/app/', (req, res) => {
 });
 
 //ENDPOINTS for coinflip
-
 //endpoints for debug == true
 if (args.debug == true) {
     //app log access endpoint
