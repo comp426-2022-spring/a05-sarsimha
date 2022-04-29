@@ -32,7 +32,7 @@ if (args.log == true) {
     app.use(morgan('FORMAT', { stream: WRITESTREAM }))
 }
 
-//start server for app
+//starting server for app
 const server = app.listen(port, () => {
     console.log('App listening on port %PORT%'.replace('%PORT%',port))
 });
