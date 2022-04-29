@@ -70,6 +70,15 @@ async function flipCall(event) {
         }
         //show console log what's going on 
         console.log(formDataJson);
+        //set up fetching request object
+        const options = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: formDataJson
+        };
 
     }
 
