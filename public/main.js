@@ -45,9 +45,30 @@ async function flipCoins(event) {
         }
     }
 // Enter number and press button to activate coin flip series
-
 // Guess a flip by clicking either heads or tails button
+const call = document.getElementById("call")
+call.addEventListener("submit", flipCall)
 
+async function flipCall(event) {
+    // Prevent default reload.
+        event.preventDefault();
+        const endpoint = "app/flip/call/"
+        const url = document.baseURI+endpoint
+        const formEvent = event.currentTarget
+        try {
+            const formData = new FormData(formEvent); 
+            const results = await sendFlips({ url, formData });
+    // Process  results.
+            console.log(results);
+    // show text results
+            document.getElementById("choice").innerHTML = "Guess: "+results.call;
+            document.getElementById("actual").innerHTML = "Actual: "+results.flip;
+            document.getElementById("results").innerHTML = "Result: "+results.result;
+        }
+        catch (error) {
+            console.log(error);
+        }
+    }
 //Navigation Buttons
 function homeNav() {
     document.getElementById("homenav").className = "active";
