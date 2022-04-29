@@ -69,6 +69,9 @@ async function flipCall(event) {
             console.log(error);
         }
     }
+async function sendFlips({ url, formData }) {
+    
+}
 //Navigation Buttons
 function homeNav() {
     document.getElementById("homenav").className = "active";
