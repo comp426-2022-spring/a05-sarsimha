@@ -6,7 +6,6 @@ const morgan = require ('morgan');
 const fs = require('fs');
 // var md5 = require('md5');
 // const { restart } = require('nodemon');
-
 //read unrlencoded and json using express
 app.use(express.urlencoded({extended: true}));
 // Make Express use its own built-in body parser to handle JSON
