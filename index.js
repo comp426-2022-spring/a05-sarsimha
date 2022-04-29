@@ -37,7 +37,7 @@ const server = app.listen(port, () => {
     console.log('App listening on port %PORT%'.replace('%PORT%',port))
 });
 
-//middleware code
+//middleware logdata
 app.use( (req, res, next) => {
     let logdata = {
         remoteaddr: req.ip,
