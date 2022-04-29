@@ -72,7 +72,7 @@ app.get('/app/', (req, res) => {
     res.end(res.statusCode+ ' ' +res.statusMessage)
 });
 
-//endpoints 
+//ENDPOINTS for coinflip
 
 //endpoints for debug == true
 if (args.debug == true) {
