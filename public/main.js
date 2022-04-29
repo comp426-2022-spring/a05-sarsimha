@@ -68,8 +68,11 @@ async function flipCall(event) {
         catch (error) {
             console.log(error);
         }
+        //show console log what's going on 
+        console.log(formDataJson);
+
     }
-    
+
 async function sendFlips({ url, formData }) {
     //extract data and turn into json
     const plainFormData = Object.fromEntries(formData.entries());
