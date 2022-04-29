@@ -69,9 +69,13 @@ async function flipCall(event) {
             console.log(error);
         }
     }
-async function sendFlips({ url, formData }) {
     
+async function sendFlips({ url, formData }) {
+    //extract data and turn into json
+    const plainFormData = Object.fromEntries(formData.entries());
+    const formDataJson = JSON.stringify(plainFormData);
 }
+
 //Navigation Buttons
 function homeNav() {
     document.getElementById("homenav").className = "active";
