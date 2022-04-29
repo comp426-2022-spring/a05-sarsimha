@@ -34,7 +34,6 @@ if (args.log == true) {
     app.use(morgan('FORMAT', { stream: WRITESTREAM }))
 }
 
-
 //start server for app
 const server = app.listen(port, () => {
     console.log('App listening on port %PORT%'.replace('%PORT%',port))
@@ -140,7 +139,6 @@ process.on('SIGINT', () => {
 })
 
 //coin flips code
-
 function coinFlip() {
     return Math.random() > .5 ? ("heads") : ("tails")
   }
