@@ -79,6 +79,10 @@ async function flipCall(event) {
             },
             body: formDataJson
         };
+        // Send req and wait for res
+	    const response = await fetch(url, options);
+        // Pass res to event handler
+        return response.json()
 
     }
 
