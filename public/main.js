@@ -3,7 +3,6 @@
 const coin = document.getElementById("coin")
 coin.addEventListener("click", flipCoin)
 async function flipCoin() {
-
     //building endpoint url 
         const endpoint = "app/flip/"
         const url = document.baseURI+endpoint
