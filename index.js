@@ -9,6 +9,7 @@ app.use(express.urlencoded({extended: true}));
 // Make Express use its own built-in body parser to handle JSON
 app.use(express.json());
 
+//minimist and args
 const args = require('minimist')(process.argv.slice(2))
 args['port', 'debug', 'log', 'help']
 const port = args.port || process.env.PORT || 5555;
