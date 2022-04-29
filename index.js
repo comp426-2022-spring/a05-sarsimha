@@ -138,7 +138,7 @@ process.on('SIGINT', () => {
     })
 })
 
-//coin flips code
+//COIN FLIPS FUNCTIONS
 function coinFlip() {
     return Math.random() > .5 ? ("heads") : ("tails")
   }
