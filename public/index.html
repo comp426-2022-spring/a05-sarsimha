@@ -44,10 +44,34 @@
 		    <p><span id="Result is: "></span></p>
     </div>
     <div id="multi" class="inactive">
-      
+      <h1>Flip as many coins as you want</h1>
+      <form id="coins">
+				<label for="number">
+					<strong>How many coins?</strong>
+				</label>
+				<input type="number" name="number" id="number">
+				<input type="submit" value="Flip 'em!">
+			</form>
+			<h2>Results</h2>
+			<p id="heads"></p>
+			<p id="tails"></p>
+			<ul id="coinlist">
     </div>
     <div id="guess" class="inactive">
-      
+      <h1>Guess the result of the coin flip</h1>
+      <form id="call">
+        <label for="side">Heads or Tails?</label>
+        <select name="guess" id="guess" form="call">
+          <option value="heads">Heads</option>
+          <option value="tails">Tails</option>
+        </select>
+        <input type="submit" value="Flip it!">
+      </form>
+      <h2>Results</h2>
+      <p><span id="choice"><span></p>
+      <p><span id="actual"><span></p>
+      <p><span id="results"><span></p>
+      <ul id="coingame"></ul>
     </div>
   </div> 
 	<script src="main.js"></script>
