@@ -98,6 +98,12 @@ app.get('/app/flip/', (req, res) => {
     res.status(200).json({'flip' : flip})
 });
 
+app.post('/app/flip/coins/', (req, res, next) => {
+    const flips = coinFlips(req.body.number)
+    const count = countFlips(flips)
+    res.status(200).json({"raw": flips, "summary": count})
+})
+
 //endpoint that returns json object with raw random number flips and summary 
 app.get('/app/flips/:number', (req, res) => {
 	let raw_flips = coinFlips(req.params.number);
