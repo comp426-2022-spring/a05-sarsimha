@@ -114,8 +114,18 @@ app.get('/app/flip/call/tails', (req, res) => {
     res.status(200).json(flipACoin('tails'));
 })
 
+//API that returns 404 not found for any undefined endpoints
+app.use(function(req, res){
+    const statusCode = 404
+    const statusMessage = "Not Found"
+    res.status(statusCode).end(statusCode + " " + statusMessage)
+})
 
-
+process.on('SIGINT', () => {
+    server.close(() =>{
+        console.log('\nApp stopped.')
+    })
+})
 
 //coin flips code
 
