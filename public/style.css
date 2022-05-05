@@ -3,7 +3,7 @@ div.hidden {
 }
 
 div.active {
-  border: 5px solid red;
+  border: 5px solid rgb(34, 164, 196);
 }
 
 img.bigcoin {
@@ -12,4 +12,18 @@ img.bigcoin {
 
 img.smallcoin {
   width: 50px;
+}
+/* This shows the active div. */
+div.active {
+  /*  border: 5px solid red; */
+    display: block;
+  }
+  /* This hides the inactive divs */
+div.inactive {
+    display: none;
+}
+
+button.active{
+  background:rgb(185, 219, 228);
+  color: white,
 }
